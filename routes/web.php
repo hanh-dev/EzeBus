@@ -20,3 +20,19 @@ Route::get('/payment', function(){
 Route::get('/passenger',function(){
     return view ('pages.passenger_details');
 });
+Route::get('/register', function() {
+    return view('auth.register');
+});
+
+Route::get('/home', [HomeController::class, 'getHome'])->name('home');
+
+Route::get('/login', [AuthController::class, 'getLoginForm'])->name('viewLogin');
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/users', [AuthController::class, 'index']);
+Route::post('/add-users', [AuthController::class, 'store']);
+
+Route::get('/logout', function () {
+    session()->forget('firebase_user');
+    return redirect('/login');
+});
