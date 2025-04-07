@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title', 'Trang chủ')</title>
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
+     
+    
+    
+</head>
+<body>
+
+    @include('components.header')
+
+    <main class="container my-4">
+        @yield('content')
+    </main>
+  @include('components.footer')
+</body>
+</html>

@@ -1,0 +1,483 @@
+ @extends('layouts.app') @section('content')
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/homepage.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 100%;
+            text-align: center;
+            align-items: center;
+        }
+        /* Banner */
+        
+        .banner img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        /* Search Form */
+        
+        .search-container {
+            background: rgb(67, 96, 112);
+            padding: 35px;
+            margin-left: 280px;
+            margin-right: 20px;
+            margin-top: -70px;
+            border-radius: 20px;
+            box-shadow: 0 0 55px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            /* margin: 30px auto; */
+            text-align: left;
+        }
+        
+        .form-container {
+            background: rgb(250, 251, 251);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border-radius: 10px;
+        }
+        
+        .form-group {
+            background: rgb(253, 254, 255);
+            flex: 1;
+            margin: 15px;
+            border-radius: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 0px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .btn {
+            background-color: #ffc107;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            margin: 25px;
+            margin-top: 40px;
+        }
+        /* Responsive */
+        
+        @media (max-width: 768px) {
+            .form-container {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+        /* Steps */
+        
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #111;
+        }
+        
+        .way-container {
+            background: rgb(250, 251, 251);
+            padding: 25px;
+            margin: 35px;
+            margin-top: 65px;
+            /* border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+        }
+        
+        .steps {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .step {
+            background: white;
+            padding: 20px;
+            width: 240px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .step img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .step-title {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .step-desc {
+            font-size: 15px;
+            color: #555;
+        }
+        
+        .arrow {
+            font-size: 24px;
+            color: #888;
+        }
+        
+        @media (max-width: 768px) {
+            .steps {
+                flex-direction: column;
+            }
+            .arrow {
+                display: none;
+            }
+        }
+        /* Route List */
+        
+        .route-container h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+            margin: 30px;
+            margin-top: 65px;
+        }
+        
+        .route-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 35px;
+        }
+        
+        .route-card {
+            background: white;
+            width: 270px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: left;
+        }
+        
+        .route-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .route-info {
+            padding: 15px;
+        }
+        
+        .route-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #222;
+        }
+        
+        .route-divider {
+            border-top: 2px dashed red;
+            margin: 10px 0;
+        }
+        
+        .route-details {
+            font-size: 14px;
+            color: #444;
+        }
+        
+        .route-time {
+            margin: 5px 0;
+        }
+        
+        .route-meta {
+            font-size: 13px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .book-btn {
+            display: block;
+            text-align: center;
+            background: #596169;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 0 0 10px 10px;
+        }
+        /* Features */
+        
+        .extention-container h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        .feature {
+            background: white;
+            width: 32%;
+            text-align: left;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .feature img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .feature-content {
+            padding: 20px;
+        }
+        
+        .feature-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .feature-text {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            font-size: 14px;
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-list li::before {
+            content: "✔️";
+            color: #f4a900;
+            margin-right: 8px;
+            font-size: 16px;
+        }
+        
+        @media (max-width: 900px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="banner">
+            <img src="{{ asset('images\IMG_9357.JPG') }}" alt="Banner">
+        </div>
+
+        <div class="search-container">
+            <form action="{{ route('search') }}" method="GET" class="form-container">
+                <div class="form-group">
+                    <label for="from">Nơi đi</label>
+                    <input type="text" id="from" name="from" placeholder="Nhập nơi đi" required>
+                </div>
+                <div class="form-group">
+                    <label for="to">Nơi đến</label>
+                    <input type="text" id="to" name="to" placeholder="Nhập nơi đến" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Ngày đi</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <button type="submit" class="btn">Tìm chuyến đi</button>
+            </form>
+        </div>
+
+        <div class="way-container">
+            <div class="title">Đặt vé dễ dàng</div>
+            <div class="steps">
+                <div class="step">
+                    <img src="icon1.png" alt="Nhập thông tin">
+                    <div class="step-title">1. Nhập thông tin</div>
+                    <div class="step-desc">Bạn vui lòng nhập nơi đi, nơi đến và ngày khởi hành để tìm vé xe.</div>
+                </div>
+                <div class="arrow">➜</div>
+                <div class="step">
+                    <img src="icon2.png" alt="Chọn chuyến xe">
+                    <div class="step-title">2. Chọn chuyến xe</div>
+                    <div class="step-desc">Bạn có thể chọn chuyến xe, chỗ ngồi và nhập thông tin để giữ chỗ.</div>
+                </div>
+                <div class="arrow">➜</div>
+                <div class="step">
+                    <img src="icon3.png" alt="Thanh toán">
+                    <div class="step-title">3. Thanh toán</div>
+                    <div class="step-desc">Thanh toán bằng ví điện tử, thẻ hoặc các phương thức khác.</div>
+                </div>
+                <div class="arrow">➜</div>
+                <div class="step">
+                    <img src="icon4.png" alt="Khởi hành">
+                    <div class="step-title">4. Khởi hành</div>
+                    <div class="step-desc">Hoàn thành các bước để nhận mã vé và chuẩn bị hành lý.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="route-container">
+            <h2>Lộ trình phổ biến</h2>
+            <div class="route-list">
+                <div class="route-card">
+                    <img src="bus1.jpg" alt="HCM - Quảng Trị">
+                    <div class="route-info">
+                        <div class="route-title">Quảng Trị ⇄ Hồ Chí Minh</div>
+                        <div class="route-divider"></div>
+                        <div class="route-details">
+                            <strong>4</strong> chuyến/ngày
+                            <div class="route-time">Quảng Trị: 06h & 14h</div>
+                            <div class="route-time">Sài Gòn: 05h & 11h</div>
+                        </div>
+                        <div class="route-meta">Thời gian: 18h30’ - Khoảng cách: 1088km</div>
+                    </div>
+                    <a href="search?from=Quảng Trị&to=Hồ Chí Minh" class="book-btn">Đặt chỗ</a>
+                </div>
+
+                <div class="route-card">
+                    <img src="bus2.jpg" alt="Quảng Trị - Bình Dương">
+                    <div class="route-info">
+                        <div class="route-title">Quảng Trị ⇄ Bình Dương - Bình Phước</div>
+                        <div class="route-divider"></div>
+                        <div class="route-details">
+                            <strong>2</strong> chuyến/ngày
+                            <div class="route-time">Quảng Trị: 14h</div>
+                            <div class="route-time">Bình Dương: 07h30</div>
+                        </div>
+                        <div class="route-meta">Thời gian: 19h30’ - Khoảng cách: 1088km</div>
+                    </div>
+                    <a href="search?from=Quảng Trị&to=Bình Dương" class="book-btn">Đặt chỗ</a>
+                </div>
+
+                <div class="route-card">
+                    <img src="bus3.jpg" alt="Quảng Trị - Đà Lạt">
+                    <div class="route-info">
+                        <div class="route-title">Quảng Trị ⇄ Đà Lạt</div>
+                        <div class="route-divider"></div>
+                        <div class="route-details">
+                            <strong>4</strong> chuyến/ngày
+                            <div class="route-time">Quảng Trị: 14h (2 chuyến)</div>
+                            <div class="route-time">Đà Lạt: 14h30 (2 chuyến)</div>
+                        </div>
+                        <div class="route-meta">Thời gian: 15h30’ - Khoảng cách: 818km</div>
+                    </div>
+                    <a href="search?from=Quảng Trị&to=Đà Lạt" class="book-btn">Đặt chỗ</a>
+                </div>
+
+                <div class="route-card">
+                    <img src="bus4.jpg" alt="Đà Lạt - Hồ Chí Minh">
+                    <div class="route-info">
+                        <div class="route-title">Đà Lạt ⇄ Hồ Chí Minh</div>
+                        <div class="route-divider"></div>
+                        <div class="route-details">
+                            <strong>4</strong> chuyến/ngày
+                            <div class="route-time">Đà Lạt: 14h30 - 22h30</div>
+                            <div class="route-time">Sài Gòn: 22h30 - 23h30</div>
+                        </div>
+                        <div class="route-meta">Thời gian: 7h30’ - Khoảng cách: 300km</div>
+                    </div>
+                    <a href="search?from=Đà Lạt&to=Hồ Chí Minh" class="book-btn">Đặt chỗ</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="extention-container">
+            <h2>Tiện ích nhà xe</h2>
+            <div class="features">
+                <div class="feature">
+                    <img src="bus1.jpg" alt="Tiện ích cao cấp">
+                    <div class="feature-content">
+                        <div class="feature-title">Tiện ích cao cấp</div>
+                        <div class="feature-text">Hệ thống xe Limousine sang trọng, đầy đủ tiện ích như màn hình riêng, nước uống, tai nghe, chăn đắp.</div>
+                        <ul class="feature-list">
+                            <li>Toàn bộ xe được trang bị nội thất cao cấp</li>
+                            <li>Luôn phục vụ nước uống và wifi trên xe</li>
+                            <li>Khử trùng Nano Bạc đảm bảo an toàn</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <img src="bus2.jpg" alt="Đáp ứng mọi khung giờ">
+                    <div class="feature-content">
+                        <div class="feature-title">Đáp ứng mọi khung giờ</div>
+                        <div class="feature-text">Với hơn 100 xe hoạt động liên tục, đáp ứng mọi nhu cầu di chuyển của hành khách.</div>
+                        <ul class="feature-list">
+                            <li>Tần suất hoạt động 10 chuyến/ngày</li>
+                            <li>Hoạt động 24/24, kể cả Lễ Tết</li>
+                            <li>Tư vấn 24/7 tại hotline 1900 6053</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <img src="bus3.jpg" alt="Dịch vụ đẳng cấp">
+                    <div class="feature-content">
+                        <div class="feature-title">Dịch vụ đẳng cấp</div>
+                        <div class="feature-text">Nhà xe phục vụ chuyên nghiệp, cam kết không đón khách dọc đường.</div>
+                        <ul class="feature-list">
+                            <li>Miễn phí đón trả tận nơi</li>
+                            <li>Không đón trả khách dọc đường</li>
+                            <li>Đặt vé dễ dàng, thanh toán linh hoạt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

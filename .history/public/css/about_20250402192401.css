@@ -1,0 +1,204 @@
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+}
+
+
+/* Phần giới thiệu */
+
+.intro {
+    background: url('..public/images\IMG_9357.JPG') no-repeat center center/cover;
+    padding: 50px 20px;
+    color: #060606;
+}
+
+.intro h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-text {
+    flex: 1;
+    text-align: left;
+}
+
+.intro-text h2 {
+    color: #030303;
+    font-size: 28px;
+}
+
+.intro-media {
+    position: relative;
+    flex: 1;
+}
+
+.intro-media img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.video-play i {
+    font-size: 24px;
+    color: #2D8B27;
+}
+
+
+/* Cột mốc thời gian */
+
+.timeline-section {
+    padding: 50px 0;
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.timeline-item.left {
+    justify-content: flex-start;
+}
+
+.timeline-item.right {
+    justify-content: flex-end;
+}
+
+.content {
+    background: #2D8B27;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 250px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.content:hover {
+    background: #FFC107;
+    color: black;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .intro-content {
+        flex-direction: column;
+    }
+    .timeline-item {
+        justify-content: center !important;
+    }
+}
+
+
+/* Tầm Nhìn & Sứ Mệnh */
+
+.vision-mission {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.vision,
+.mission {
+    width: 40%;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+    position: relative;
+    background: white;
+    transition: 0.3s ease-in-out;
+}
+
+.vision:hover,
+.mission:hover {
+    transform: translateY(-10px);
+}
+
+.vision {
+    border-color: #a4c639;
+}
+
+.mission {
+    border-color: #e74c3c;
+}
+
+.icon img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.vision h3 {
+    color: #a4c639;
+}
+
+.mission h3 {
+    color: #e74c3c;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+.image {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.image img {
+    max-width: 500px;
+    width: 100%;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .vision,
+    .mission {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
