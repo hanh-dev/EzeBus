@@ -16,12 +16,12 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-// onAuthStateChanged(auth, (user) => {
-//     if (user) {
-//         console.log("User đã đăng nhập:", user);
-//         window.location.href = "/home";
-//     }
-// });
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        console.log("User đã đăng nhập:", user);
+        window.location.href = "/home";
+    }
+});
 
 document.getElementById("googleLogin").addEventListener("click", async function () {
     try {
