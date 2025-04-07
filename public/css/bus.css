@@ -1,0 +1,194 @@
+.container-fluid {
+    --bs-gutter-x: 0 !important;
+    width: 100% !important;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1187px !important;
+    --bs-gutter-x: 0 !important;
+}
+.bus_trip {
+    width: 100%;
+    background-color: #002B3D;
+    padding: 20px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.top_bus_trip,
+.locations,
+.route,
+.date-selector {
+    display: flex;
+    justify-content: space-between;
+}
+
+.locations p {
+    font-size: 20px;
+    color: #337799;
+    margin-top: 20px;
+}
+
+.route {
+    margin-bottom: 20px;
+}
+
+.route p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.route i {
+    font-size: 30px !important;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.dashed-line {
+    width: 10px;
+    height: 2px;
+    background: transparent;
+    border-top: 2px dashed #fff;
+}
+
+.date-selector {
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+.bus_card {
+    margin-right: 200px;
+    margin-left: 200px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    font-family: Arial, sans-serif;
+}
+
+/* Phần trên của card */
+.bus_card_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.bus_card_info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.bus_card_info i{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0f0909;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: white !important;
+}
+
+.bus_info_card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #0A3D52;
+    margin-bottom: 20px;
+}
+
+.info_card {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+}
+
+.cheapest-tag {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Phần giữa của card */
+.bus_card_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+
+
+.light_left, .light_right {
+    font-size: 14px;
+    color: gray;
+}
+
+.between_card_between {
+    text-align: center;
+    position: relative;
+}
+
+.between_time {
+    font-size: 14px;
+    color: gray;
+}
+
+.dasheds-line {
+    width: 6px;
+    height: 6px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 3px;
+}
+
+/* .fa-bus {
+    font-size: 14px;
+    color: gray;
+} */
+
+/* Phần dưới của card */
+/* .bus_card_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+} */
+
+/* .evaluate_card {
+    font-size: 14px;
+    color: #ffa500;
+} */
+
+/* .person {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+} */
+
+/* .price_card {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0A3D52;
+} */
+
+.bus_card_bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.bus_card_bottom i{
+    font-size: 12px;   
+}
