@@ -102,8 +102,4 @@
     </div>
 </body>
 <script src="{{ asset('js/booking.js') }}"></script>
-
-
-
-
 </html>

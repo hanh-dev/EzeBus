@@ -4,11 +4,14 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
-
+use App\Http\Controllers\UserController;
 
 // Route::get('/home', function () {
 //     return view('welcome');
 // });
+
+Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+
 
 Route::get('/bus_detail', function(){
     return view ('pages.bus_detail');
@@ -34,9 +37,6 @@ Route::get('/header-demo', function () {
     return view('header-demo');
 });
 
-Route::get('/profile', function () {
-    return view('profile');
-})->name('profile');
 Route::get('/test-home', function () {
     return view('home-test');
 });
@@ -62,6 +62,4 @@ Route::get('/logout', function () {
     return redirect('/login');
 });
 
-Route::get('/profile', function () {
-    return view('pages.userProfile');
-});
+Route::get('/profile', [UserController::class, 'profile'])->name('profile');
