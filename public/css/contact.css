@@ -1,0 +1,20 @@
+ .contact-container {
+     width: 1185px;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ .d-flex {
+     display: flex;
+     gap: 50px;
+ }
+ 
+ .contact-form {
+     flex: 1;
+ }
+ 
+ #map {
+     flex: 1;
+     height: 500px;
+     border-radius: 10px;
+ }

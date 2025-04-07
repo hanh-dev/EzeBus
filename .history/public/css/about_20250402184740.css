@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.about-text {
+    width: 60%;
+}
+
+.about-text h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.hotline {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hotline span {
+    margin-right: 10px;
+    color: #333;
+}
+
+.hotline-number {
+    color: #f4b400;
+    font-size: 24px;
+}
+
+.about-icons {
+    width: 35%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon i {
+    font-size: 30px;
+    color: #f4b400;
+}
+
+.icon p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-text {
+        width: 100%;
+        text-align: center;
+    }
+    .about-icons {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 20px;
+    }
+}

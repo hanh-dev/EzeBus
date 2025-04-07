@@ -1,0 +1,135 @@
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+}
+
+
+/* Phần giới thiệu */
+
+.intro {
+    background: url('..public/images\IMG_9357.JPG') no-repeat center center/cover;
+    padding: 50px 20px;
+    color: #060606;
+}
+
+.intro h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+. .intro-text {
+    flex: 1;
+    text-align: left;
+    margin-right: 50px;
+}
+
+.intro-text h2 {
+    color: #030303;
+    font-size: 28px;
+}
+
+.intro-media {
+    position: relative;
+    flex: 1;
+}
+
+.intro-media img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: #002B3D 0px 10px 10px 0px;
+}
+
+
+/* Tầm Nhìn & Sứ Mệnh */
+
+.vision-mission {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.vision,
+.mission {
+    width: 40%;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+    margin: 50px;
+    position: relative;
+    background: white;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng cho phần tử */
+}
+
+.vision:hover,
+.mission:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Hiệu ứng đổ bóng khi hover */
+}
+
+.vision {
+    border-color: #002B3D;
+}
+
+.mission {
+    border-color: #002B3D;
+}
+
+.icon img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.vision h3 {
+    color: #002B3D;
+}
+
+.mission h3 {
+    color: #002B3D;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+.image {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.image img {
+    max-width: 500px;
+    width: 100%;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .vision,
+    .mission {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
