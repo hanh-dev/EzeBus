@@ -1,0 +1,54 @@
+<>.service-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.service-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.service-subtitle {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.service-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.service-benefits {
+    flex: 1;
+}
+
+.service-benefits h3 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.service-benefits ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-benefits li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
