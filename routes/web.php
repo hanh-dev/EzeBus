@@ -6,9 +6,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 
 
-Route::get('/home', function () {
-    return view('welcome');
-});
+// Route::get('/home', function () {
+//     return view('welcome');
+// });
 
 Route::get('/bus_detail', function(){
     return view ('pages.bus_detail');
@@ -62,3 +62,6 @@ Route::get('/logout', function () {
     return redirect('/login');
 });
 
+Route::get('/profile', function () {
+    return view('pages.userProfile');
+});
