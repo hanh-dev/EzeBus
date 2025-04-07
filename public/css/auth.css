@@ -78,11 +78,12 @@ input {
     border-radius: 5px;
     cursor: pointer;
     background: white;
+    gap: 12px;
 }
 
 .google-btn img {
-    width: 40px;
-    margin-right: 10px;
+    width: 50px;
+    right: 10px;
 }
 
 .google-btn:hover {
