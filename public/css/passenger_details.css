@@ -1,0 +1,28 @@
+.container-fluid {
+    --bs-gutter-x: 0 !important;
+    width: 100% !important;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1185px !important;
+    --bs-gutter-x: 0 !important;
+}
+
+.info_detai{
+    display: flex;
+    align-items: center;
+}
+.info_detai i{
+    margin-right: 150px;
+}
+.left_info_person {
+    width: 100%;
+}
+
+.full-height {
+    height: 100% !important;         /* Chiếm toàn bộ chiều cao của cột */
+    object-fit: cover;    /* Đảm bảo hình ảnh lấp đầy mà không bị biến dạng */
+}
+

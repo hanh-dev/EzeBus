@@ -6,9 +6,26 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
 
-Route::get('/home', function () {
-    return view('welcome');
+// Route::get('/home', function () {
+//     return view('welcome');
+// });
+
+Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+
+
+Route::get('/bus_detail', function(){
+    return view ('pages.bus_detail');
 });
+Route::get('/bus', function(){
+    return view ('pages.bus');
+});
+Route::get('/payment', function(){
+    return view ('pages.payment');
+});
+Route::get('/passenger',function(){
+    return view ('pages.passenger_details');
+});
+
 Route::get('/home', [PageController::class, 'index']);
 Route::get('/search', [PageController::class, 'index'])->name('search');
 Route::get('/about', [PageController::class, 'about'])->name('about');
