@@ -1,0 +1,1 @@
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');

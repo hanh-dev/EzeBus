@@ -1,0 +1,114 @@
+.footer {
+    background-color: #002B3D;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-left: 150px;
+    /* margin-right: 20px; */
+}
+
+.footer-col {
+    text-align: left;
+    /* Căn trái toàn bộ nội dung */
+}
+
+.footer-col h2 {
+    color: #ffc107;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-col h3 {
+    color: #ffc107;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+}
+
+
+/* .footer-col p,
+.footer-col a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+} */
+
+.footer-col a:hover {
+    color: #ffc107;
+}
+
+.hotline {
+    font-weight: bold;
+    color: #ffc107;
+}
+
+.qrcode {
+    width: 80px;
+}
+
+.app-links img {
+    width: 120px;
+    margin-top: 5px;
+}
+
+.social-links img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.verified img {
+    width: 120px;
+    margin-top: 10px;
+}
+
+
+/* .footer-bottom {
+    background-color: #ffc107;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-top: 20px;
+} */
+
+.logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .social-links {
+        justify-content: center;
+    }
+}
